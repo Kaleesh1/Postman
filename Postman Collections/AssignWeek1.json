@@ -69,7 +69,28 @@
 				},
 				"method": "GET",
 				"header": [],
-				"url": "https://dev27686.service-now.com/api/now/table/incident"
+				"url": {
+					"raw": "https://dev27686.service-now.com/api/now/table/incident?JQL=created>=-24",
+					"protocol": "https",
+					"host": [
+						"dev27686",
+						"service-now",
+						"com"
+					],
+					"path": [
+						"api",
+						"now",
+						"table",
+						"incident"
+					],
+					"query": [
+						{
+							"key": "JQL",
+							"value": "created>=-24",
+							"type": "text"
+						}
+					]
+				}
 			},
 			"response": []
 		}
