@@ -38,6 +38,18 @@
 				"url": "https://dev27686.service-now.com/api/now/table/incident"
 			},
 			"response": []
+		},
+		{
+			"name": "New Request",
+			"id": "230a7982-d148-415d-9319-70f5400d0477",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
 		}
 	]
 }
