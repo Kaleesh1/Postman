@@ -40,7 +40,7 @@
 			"response": []
 		},
 		{
-			"name": "New Request",
+			"name": "RequestsCreatedIn24hrs",
 			"id": "230a7982-d148-415d-9319-70f5400d0477",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
