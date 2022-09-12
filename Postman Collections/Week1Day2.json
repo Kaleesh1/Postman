@@ -7,6 +7,20 @@
 	"item": [
 		{
 			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "70272d26-3e8a-4357-bb73-ea16ef64b5bb",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "0cf42dcd-0bcc-44de-94c4-46d4811a2f60",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -21,27 +35,7 @@
 				},
 				"method": "GET",
 				"header": [],
-				"url": {
-					"raw": "https://dev27686.service-now.com/api/now/table/incident?sysparm_limit=1",
-					"protocol": "https",
-					"host": [
-						"dev27686",
-						"service-now",
-						"com"
-					],
-					"path": [
-						"api",
-						"now",
-						"table",
-						"incident"
-					],
-					"query": [
-						{
-							"key": "sysparm_limit",
-							"value": "1"
-						}
-					]
-				}
+				"url": "https://dev27686.service-now.com/api/now/table/incident"
 			},
 			"response": []
 		}
