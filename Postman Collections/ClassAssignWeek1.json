@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "042c2aba-881f-4366-9738-a29e4dc44f05",
+		"name": "REST-ServiceNow",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ServNowIncidentCreate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d9a36ece-bfa8-4a91-8aa8-1365c7092e83",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "d68118f8-f3be-4b96-9ffc-52335274380e",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "m*p6UJjtB$1M",
+						"username": "admin"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"description\":\"My Mac is not working after restart-K\",\"short_description\":\"Apple-K\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://dev27686.service-now.com/api/now/table/incident"
+			},
+			"response": []
+		},
+		{
+			"name": "ServNowGet",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "878a9572-d280-40af-b289-19dc3f8fcf07",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "3bee032b-be76-41b3-bd5e-4b51d187081e",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "m*p6UJjtB$1M",
+						"username": "admin"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "https://dev27686.service-now.com/api/now/table/incident/a51810762f311110f48ed3f62799b68f"
+			},
+			"response": []
+		}
+	]
+}
