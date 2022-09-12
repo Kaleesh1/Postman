@@ -71,7 +71,7 @@
 				"header": [
 					{
 						"key": "JQL",
-						"value": "created>=-24h",
+						"value": "value-project=AP, created>=-24h",
 						"type": "text"
 					}
 				],
