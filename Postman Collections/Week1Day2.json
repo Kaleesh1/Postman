@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "AllRequestsServiceNow",
+			"name": "AllIncidentsServiceNow",
 			"event": [
 				{
 					"listen": "test",
