@@ -41,6 +41,20 @@
 		},
 		{
 			"name": "RequestsCreatedIn24hrs",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "42000e02-b44d-4009-90de-4d094003d554",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "230a7982-d148-415d-9319-70f5400d0477",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -54,7 +68,13 @@
 					}
 				},
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "JQL",
+						"value": "value-project=AP%26create>=-24h",
+						"type": "text"
+					}
+				],
 				"url": "https://dev27686.service-now.com/api/now/table/incident"
 			},
 			"response": []
