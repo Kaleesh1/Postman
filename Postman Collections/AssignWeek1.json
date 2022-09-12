@@ -68,13 +68,7 @@
 					}
 				},
 				"method": "GET",
-				"header": [
-					{
-						"key": "JQL",
-						"value": "value-project=AP, created>=-24h",
-						"type": "text"
-					}
-				],
+				"header": [],
 				"url": "https://dev27686.service-now.com/api/now/table/incident"
 			},
 			"response": []
