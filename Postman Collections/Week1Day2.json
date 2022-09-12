@@ -46,8 +46,16 @@
 				"disableBodyPruning": true
 			},
 			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "m*p6UJjtB$1M",
+						"username": "admin"
+					}
+				},
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": "https://dev27686.service-now.com/api/now/table/incident"
 			},
 			"response": []
 		}
