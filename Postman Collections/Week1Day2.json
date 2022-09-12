@@ -70,7 +70,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://dev27686.service-now.com/api/now/table/incident?JQL=created>=-24",
+					"raw": "https://dev27686.service-now.com/api/now/table/incident?JQL=opened_at>=-24",
 					"protocol": "https",
 					"host": [
 						"dev27686",
@@ -86,8 +86,7 @@
 					"query": [
 						{
 							"key": "JQL",
-							"value": "created>=-24",
-							"type": "text"
+							"value": "opened_at>=-24"
 						}
 					]
 				}
