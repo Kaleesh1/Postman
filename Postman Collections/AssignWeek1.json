@@ -1,0 +1,83 @@
+{
+	"info": {
+		"_postman_id": "b98e8663-3cb8-4bd5-9be8-6954d7f53d1c",
+		"name": "AssignWeek1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AllIncidentsServiceNow",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "70272d26-3e8a-4357-bb73-ea16ef64b5bb",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "0cf42dcd-0bcc-44de-94c4-46d4811a2f60",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "m*p6UJjtB$1M",
+						"username": "admin"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "https://dev27686.service-now.com/api/now/table/incident"
+			},
+			"response": []
+		},
+		{
+			"name": "RequestsCreatedIn24hrs",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "42000e02-b44d-4009-90de-4d094003d554",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "230a7982-d148-415d-9319-70f5400d0477",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "m*p6UJjtB$1M",
+						"username": "admin"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "JQL",
+						"value": "value-project=AP%26create>=-24h",
+						"type": "text"
+					}
+				],
+				"url": "https://dev27686.service-now.com/api/now/table/incident"
+			},
+			"response": []
+		}
+	]
+}
