@@ -71,7 +71,7 @@
 				"header": [
 					{
 						"key": "JQL",
-						"value": "create>=-24h",
+						"value": "created>=-24h",
 						"type": "text"
 					}
 				],
