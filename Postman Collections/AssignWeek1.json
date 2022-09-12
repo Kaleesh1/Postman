@@ -21,7 +21,7 @@
 					}
 				}
 			],
-			"_postman_id": "0cf42dcd-0bcc-44de-94c4-46d4811a2f60",
+			"id": "0cf42dcd-0bcc-44de-94c4-46d4811a2f60",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -55,7 +55,7 @@
 					}
 				}
 			],
-			"_postman_id": "230a7982-d148-415d-9319-70f5400d0477",
+			"id": "230a7982-d148-415d-9319-70f5400d0477",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -71,7 +71,7 @@
 				"header": [
 					{
 						"key": "JQL",
-						"value": "value-project=AP%26create>=-24h",
+						"value": "value-project=AP, create>=-24h",
 						"type": "text"
 					}
 				],
