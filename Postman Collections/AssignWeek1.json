@@ -70,7 +70,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://dev27686.service-now.com/api/now/table/incident?JQL=value-project=AP%26created>=-24h",
+					"raw": "https://dev27686.service-now.com/api/now/table/incident?JQL=sys_updated_on>=-24h",
 					"protocol": "https",
 					"host": [
 						"dev27686",
@@ -86,7 +86,7 @@
 					"query": [
 						{
 							"key": "JQL",
-							"value": "value-project=AP%26created>=-24h"
+							"value": "sys_updated_on>=-24h"
 						}
 					]
 				}
