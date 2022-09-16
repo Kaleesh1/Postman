@@ -277,6 +277,20 @@
 		},
 		{
 			"name": "ServiceNowPut",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d2205c53-1062-4171-82d2-0ed71519d5f6",
+						"exec": [
+							"pm.test(\"Status code is 200: Replaced Description\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "e8c9bf8a-450f-4407-938e-84636aa350e4",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
