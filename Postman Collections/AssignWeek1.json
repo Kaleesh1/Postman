@@ -134,7 +134,7 @@
 			]
 		},
 		{
-			"name": "New Request",
+			"name": "ServiceNowPost",
 			"event": [
 				{
 					"listen": "test",
