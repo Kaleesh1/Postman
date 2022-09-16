@@ -289,7 +289,7 @@
 						"username": "admin"
 					}
 				},
-				"method": "GET",
+				"method": "PUT",
 				"header": []
 			},
 			"response": []
