@@ -154,6 +154,13 @@
 				"disableBodyPruning": true
 			},
 			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "m*p6UJjtB$1M",
+						"username": "admin"
+					}
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
