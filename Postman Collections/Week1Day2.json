@@ -458,7 +458,106 @@
 				},
 				"url": "https://dev27686.service-now.com/api/now/table/incident/9d5a79942f021110f48ed3f62799b6b0"
 			},
-			"response": []
+			"response": [
+				{
+					"id": "cf98b89b-404c-4517-afc4-05546273ba31",
+					"name": "ServiceNowPatch",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"caller_id\":\"Abel Tuter\",\"business_service\":\"All\",\"description\":\"Assign1 Week1 Patch Description. KK\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://dev27686.service-now.com/api/now/table/incident/9d5a79942f021110f48ed3f62799b6b0"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Set-Cookie",
+							"value": "JSESSIONID=6D362F85FD9F0DCB9AFFE9B40BBC1A54; Path=/; HttpOnly;Secure"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "glide_user=; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/; HttpOnly;Secure"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "glide_user_session=; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/; HttpOnly;Secure"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "glide_user_route=glide.a0180208fbfb2f9fda6d6d8dcbbb45ec; Max-Age=2147483647; Expires=Wed, 04-Oct-2090 09:51:10 GMT; Path=/; HttpOnly;Secure"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "glide_session_store=72094E902F021110F48ED3F62799B637; Max-Age=1800; Expires=Fri, 16-Sep-2022 07:07:03 GMT; Path=/; HttpOnly;Secure"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "sem_wait;dur=0, sesh_wait;dur=0"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "X-Is-Logged-In",
+							"value": "true"
+						},
+						{
+							"key": "X-Transaction-ID",
+							"value": "b6094e902f02"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-store,no-cache"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache,no-store,must-revalidate,max-age=-1"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Sep 2022 06:37:03 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "ServiceNow"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=63072000; includeSubDomains"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"result\": {\n        \"parent\": \"\",\n        \"made_sla\": \"true\",\n        \"caused_by\": \"\",\n        \"watch_list\": \"\",\n        \"upon_reject\": \"cancel\",\n        \"sys_updated_on\": \"2022-09-16 06:37:03\",\n        \"child_incidents\": \"0\",\n        \"hold_reason\": \"\",\n        \"origin_table\": \"\",\n        \"task_effective_number\": \"INC0010004\",\n        \"approval_history\": \"\",\n        \"number\": \"INC0010004\",\n        \"resolved_by\": \"\",\n        \"sys_updated_by\": \"admin\",\n        \"opened_by\": {\n            \"link\": \"https://dev27686.service-now.com/api/now/table/sys_user/6816f79cc0a8016401c5a33be04be441\",\n            \"value\": \"6816f79cc0a8016401c5a33be04be441\"\n        },\n        \"user_input\": \"\",\n        \"sys_created_on\": \"2022-09-16 05:32:46\",\n        \"sys_domain\": {\n            \"link\": \"https://dev27686.service-now.com/api/now/table/sys_user_group/global\",\n            \"value\": \"global\"\n        },\n        \"state\": \"1\",\n        \"route_reason\": \"\",\n        \"sys_created_by\": \"admin\",\n        \"knowledge\": \"false\",\n        \"order\": \"\",\n        \"calendar_stc\": \"\",\n        \"closed_at\": \"\",\n        \"cmdb_ci\": \"\",\n        \"delivery_plan\": \"\",\n        \"contract\": \"\",\n        \"impact\": \"3\",\n        \"active\": \"true\",\n        \"work_notes_list\": \"\",\n        \"business_service\": {\n            \"link\": \"https://dev27686.service-now.com/api/now/table/cmdb_ci_service/0e7a06157f10310016181ccebefa91ce\",\n            \"value\": \"0e7a06157f10310016181ccebefa91ce\"\n        },\n        \"business_impact\": \"\",\n        \"priority\": \"5\",\n        \"sys_domain_path\": \"/\",\n        \"rfc\": \"\",\n        \"time_worked\": \"\",\n        \"expected_start\": \"\",\n        \"opened_at\": \"2022-09-16 05:32:46\",\n        \"business_duration\": \"\",\n        \"group_list\": \"\",\n        \"work_end\": \"\",\n        \"caller_id\": {\n            \"link\": \"https://dev27686.service-now.com/api/now/table/sys_user/62826bf03710200044e0bfc8bcbe5df1\",\n            \"value\": \"62826bf03710200044e0bfc8bcbe5df1\"\n        },\n        \"reopened_time\": \"\",\n        \"resolved_at\": \"\",\n        \"approval_set\": \"\",\n        \"subcategory\": \"\",\n        \"work_notes\": \"\",\n        \"universal_request\": \"\",\n        \"short_description\": \"Short Desc for Week 1 Assign1\",\n        \"close_code\": \"\",\n        \"correlation_display\": \"\",\n        \"delivery_task\": \"\",\n        \"work_start\": \"\",\n        \"assignment_group\": \"\",\n        \"additional_assignee_list\": \"\",\n        \"business_stc\": \"\",\n        \"cause\": \"\",\n        \"description\": \"Assign1 Week1 Patch Description. KK\",\n        \"origin_id\": \"\",\n        \"calendar_duration\": \"\",\n        \"close_notes\": \"\",\n        \"notify\": \"1\",\n        \"service_offering\": \"\",\n        \"sys_class_name\": \"incident\",\n        \"closed_by\": \"\",\n        \"follow_up\": \"\",\n        \"parent_incident\": \"\",\n        \"sys_id\": \"9d5a79942f021110f48ed3f62799b6b0\",\n        \"contact_type\": \"\",\n        \"reopened_by\": \"\",\n        \"incident_state\": \"1\",\n        \"urgency\": \"3\",\n        \"problem_id\": \"\",\n        \"company\": {\n            \"link\": \"https://dev27686.service-now.com/api/now/table/core_company/227cdfb03710200044e0bfc8bcbe5d6b\",\n            \"value\": \"227cdfb03710200044e0bfc8bcbe5d6b\"\n        },\n        \"reassignment_count\": \"0\",\n        \"activity_due\": \"\",\n        \"assigned_to\": \"\",\n        \"severity\": \"3\",\n        \"comments\": \"\",\n        \"approval\": \"not requested\",\n        \"sla_due\": \"\",\n        \"comments_and_work_notes\": \"\",\n        \"due_date\": \"\",\n        \"sys_mod_count\": \"4\",\n        \"reopen_count\": \"0\",\n        \"sys_tags\": \"\",\n        \"escalation\": \"0\",\n        \"upon_approval\": \"proceed\",\n        \"correlation_id\": \"\",\n        \"location\": \"\",\n        \"category\": \"inquiry\"\n    }\n}"
+				}
+			]
 		}
 	]
 }
