@@ -561,6 +561,20 @@
 		},
 		{
 			"name": "GETusingQueryParams",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c09b810c-3068-42f6-b263-42a845a19070",
+						"exec": [
+							"pm.test(\"Status code is 200: Get Success\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "170c2e08-5a38-4c13-a6ea-1d3a82753cec",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
