@@ -576,7 +576,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://dev27686.service-now.com/api/now/table/incident/?number=INC0010004",
+					"raw": "https://dev27686.service-now.com/api/now/table/incident/?sysparm_fields=number,sys_id,description,short_description,sys_created_on",
 					"protocol": "https",
 					"host": [
 						"dev27686",
@@ -592,8 +592,8 @@
 					],
 					"query": [
 						{
-							"key": "number",
-							"value": "INC0010004"
+							"key": "sysparm_fields",
+							"value": "number,sys_id,description,short_description,sys_created_on"
 						}
 					]
 				}
