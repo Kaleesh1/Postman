@@ -560,7 +560,7 @@
 			]
 		},
 		{
-			"name": "New Request",
+			"name": "GETusingParams",
 			"id": "170c2e08-5a38-4c13-a6ea-1d3a82753cec",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
