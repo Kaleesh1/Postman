@@ -156,6 +156,10 @@
 			"request": {
 				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"description\":\"This is for Week 1 Assign1\",\"short_description\":\"Short Desc for Week 1 Assign1\"}"
+				},
 				"url": "https://dev27686.service-now.com/api/now/table/incident"
 			},
 			"response": []
