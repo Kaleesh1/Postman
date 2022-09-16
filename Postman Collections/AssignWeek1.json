@@ -433,6 +433,15 @@
 				},
 				"method": "PATCH",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"caller_id\":\"Abel Tuter\",\"business_service\":\"All\",\"description\":\"Patch Description. KK\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": "https://dev27686.service-now.com/api/now/table/incident/9d5a79942f021110f48ed3f62799b6b0"
 			},
 			"response": []
