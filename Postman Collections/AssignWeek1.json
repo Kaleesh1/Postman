@@ -598,7 +598,114 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"id": "67352d08-01ba-4872-906b-2190b732fc9b",
+					"name": "GETusingParams",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://dev27686.service-now.com/api/now/table/incident/9d5a79942f021110f48ed3f62799b6b0?sysparm_fields=number%2Csys_id%2Cdescription%2Cshort_description%2Csys_created_on",
+							"protocol": "https",
+							"host": [
+								"dev27686",
+								"service-now",
+								"com"
+							],
+							"path": [
+								"api",
+								"now",
+								"table",
+								"incident",
+								"9d5a79942f021110f48ed3f62799b6b0"
+							],
+							"query": [
+								{
+									"key": "sysparm_fields",
+									"value": "number%2Csys_id%2Cdescription%2Cshort_description%2Csys_created_on"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server-Timing",
+							"value": "sem_wait;dur=1, sesh_wait;dur=0"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "glide_user=; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/; HttpOnly;Secure"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "glide_user_session=; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/; HttpOnly;Secure"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "glide_user_route=glide.a0180208fbfb2f9fda6d6d8dcbbb45ec; Max-Age=2147483647; Expires=Wed, 04-Oct-2090 10:14:05 GMT; Path=/; HttpOnly;Secure"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "glide_session_store=60FA4E102F021110F48ED3F62799B631; Max-Age=1800; Expires=Fri, 16-Sep-2022 07:29:58 GMT; Path=/; HttpOnly;Secure"
+						},
+						{
+							"key": "X-Is-Logged-In",
+							"value": "true"
+						},
+						{
+							"key": "X-Transaction-ID",
+							"value": "264e4a542f02"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-store,no-cache"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache,no-store,must-revalidate,max-age=-1"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Sep 2022 06:59:58 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "ServiceNow"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=63072000; includeSubDomains"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"result\": {\n        \"number\": \"INC0010004\",\n        \"sys_id\": \"9d5a79942f021110f48ed3f62799b6b0\",\n        \"short_description\": \"Short Desc for Week 1 Assign1\",\n        \"sys_created_on\": \"2022-09-16 05:32:46\",\n        \"description\": \"Assign1 Week1 Patch Description. KK\"\n    }\n}"
+				}
+			]
 		}
 	]
 }
