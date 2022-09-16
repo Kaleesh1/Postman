@@ -424,6 +424,13 @@
 				"disableBodyPruning": true
 			},
 			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "m*p6UJjtB$1M",
+						"username": "admin"
+					}
+				},
 				"method": "PATCH",
 				"header": [],
 				"url": "https://dev27686.service-now.com/api/now/table/incident/9d5a79942f021110f48ed3f62799b6b0"
