@@ -140,8 +140,9 @@
 				"disableBodyPruning": true
 			},
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [],
+				"url": "https://dev27686.service-now.com/api/now/table/incident"
 			},
 			"response": []
 		}
