@@ -419,6 +419,20 @@
 		},
 		{
 			"name": "ServiceNowPatch",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e0eab6da-9ebd-4008-a903-2ac6b367c97f",
+						"exec": [
+							"pm.test(\"Status code is 200: PATCH Successfull\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "8b343e4c-a677-4d2c-af05-74702a06e141",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
