@@ -418,13 +418,13 @@
 			]
 		},
 		{
-			"name": "New Request",
+			"name": "ServiceNowPatch",
 			"id": "8b343e4c-a677-4d2c-af05-74702a06e141",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
 			"request": {
-				"method": "GET",
+				"method": "PATCH",
 				"header": []
 			},
 			"response": []
