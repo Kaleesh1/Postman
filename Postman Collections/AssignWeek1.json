@@ -307,7 +307,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"description\":\"Updated Desc. Week1 Assign POSTMAN\"}",
+					"raw": "{\"description\":\"Replace Desc. Week1 Assign POSTMAN\"}",
 					"options": {
 						"raw": {
 							"language": "json"
