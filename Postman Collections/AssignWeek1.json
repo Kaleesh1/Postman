@@ -135,6 +135,20 @@
 		},
 		{
 			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "02a31b35-2ce2-4e17-9b87-693fb0603e81",
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "84bd2c96-8a1e-45ae-92b3-082efebe6e51",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
