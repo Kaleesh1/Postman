@@ -576,7 +576,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://dev27686.service-now.com/api/now/table/incident/?sysparm_fields=number,sys_id,description,short_description,sys_created_on",
+					"raw": "https://dev27686.service-now.com/api/now/table/incident/?sysparm_fields=number",
 					"protocol": "https",
 					"host": [
 						"dev27686",
@@ -593,7 +593,7 @@
 					"query": [
 						{
 							"key": "sysparm_fields",
-							"value": "number,sys_id,description,short_description,sys_created_on"
+							"value": "number"
 						}
 					]
 				}
