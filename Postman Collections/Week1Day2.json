@@ -276,7 +276,7 @@
 			]
 		},
 		{
-			"name": "New Request",
+			"name": "ServiceNowPut",
 			"id": "e8c9bf8a-450f-4407-938e-84636aa350e4",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
