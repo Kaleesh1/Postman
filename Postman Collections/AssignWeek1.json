@@ -576,7 +576,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://dev27686.service-now.com/api/now/table/incident/?task_effective_number=INC0010004",
+					"raw": "https://dev27686.service-now.com/api/now/table/incident/?number=INC0010004",
 					"protocol": "https",
 					"host": [
 						"dev27686",
@@ -592,9 +592,8 @@
 					],
 					"query": [
 						{
-							"key": "task_effective_number",
-							"value": "INC0010004",
-							"type": "text"
+							"key": "number",
+							"value": "INC0010004"
 						}
 					]
 				}
