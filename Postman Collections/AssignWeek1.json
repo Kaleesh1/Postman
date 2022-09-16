@@ -177,7 +177,7 @@
 			"response": [
 				{
 					"id": "6d1d3ef8-ed58-4287-ab45-72f7e6ec1d4c",
-					"name": "New Request",
+					"name": "ServiceNowPost",
 					"originalRequest": {
 						"method": "POST",
 						"header": [],
