@@ -567,7 +567,8 @@
 			},
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": "https://dev27686.service-now.com/api/now/table/incident/"
 			},
 			"response": []
 		}
