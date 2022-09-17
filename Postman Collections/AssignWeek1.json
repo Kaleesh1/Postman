@@ -729,7 +729,8 @@
 			},
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": "https://dev27686.service-now.com/api/now/table/incident/9d5a79942f021110f48ed3f62799b6b0"
 			},
 			"response": []
 		}
