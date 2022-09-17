@@ -742,6 +742,13 @@
 				"disableBodyPruning": true
 			},
 			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "m*p6UJjtB$1M",
+						"username": "admin"
+					}
+				},
 				"method": "DELETE",
 				"header": [],
 				"url": "https://dev27686.service-now.com/api/now/table/incident/12583ae82f8e1110f48ed3f62799b649"
