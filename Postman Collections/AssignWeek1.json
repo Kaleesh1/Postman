@@ -722,7 +722,7 @@
 			]
 		},
 		{
-			"name": "New Request",
+			"name": "ServNowDelete",
 			"id": "088c80c4-da86-49da-97ba-3465414a1310",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
