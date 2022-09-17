@@ -728,7 +728,7 @@
 				"disableBodyPruning": true
 			},
 			"request": {
-				"method": "GET",
+				"method": "DELETE",
 				"header": [],
 				"url": "https://dev27686.service-now.com/api/now/table/incident/12583ae82f8e1110f48ed3f62799b649"
 			},
