@@ -1,0 +1,333 @@
+{
+	"info": {
+		"_postman_id": "0da83902-3537-4557-b34a-bb98abfae151",
+		"name": "Week2.Day2CalssAssignJira",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CreateJiraPOST",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f1d59a04-7c9d-439e-8c90-d38089ba7e15",
+						"exec": [
+							"C_response=pm.response.json();",
+							"pm.globals.set(\"Key\",C_response.key);",
+							"pm.test(\"Status code is 201: Request create successfully\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "51564d41-9e25-4a14-8b43-26cad2d50d24",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "jaXjYQDJccPw4jwIAlaJ530D",
+						"username": "hari.radhakrishnan@testleaf.com"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fields\": {\n        \"project\": {\n            \"key\": \"SEP\"\n        },\n        \"summary\": \"create issue in RA project\",\n        \"description\": \"Creating of an issue using project keys and issue type names using the REST API\",\n        \"issuetype\": {\n            \"name\": \"Bug\"\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://{{HostJira}}/rest/api/2/issue/"
+			},
+			"response": []
+		},
+		{
+			"name": "RetriveJiraGET",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f1d59a04-7c9d-439e-8c90-d38089ba7e15",
+						"exec": [
+							"pm.test(\"Status code is 200: Request retrieved successfully\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "484a77e5-c7b4-433f-9f3b-a44b662824b8",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "jaXjYQDJccPw4jwIAlaJ530D",
+						"username": "hari.radhakrishnan@testleaf.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fields\": {\n    \"project\":\n                {\n                    \"key\": \"SEP\"\n                },\n    \"summary\": \"create issue in RA project\",\n    \"description\": \"Creating of an issue using project keys and issue type names using the REST API\",\n    \"issuetype\": {\n                    \"name\": \"Bug\"\n                }\n    }\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://{{HostJira}}/rest/api/2/issue/{{Key}}"
+			},
+			"response": []
+		},
+		{
+			"name": "SearchAllIssuesJira",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f1d59a04-7c9d-439e-8c90-d38089ba7e15",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "93fd4d1b-eb8b-4344-902d-ee3dac2dabd5",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "jaXjYQDJccPw4jwIAlaJ530D",
+						"username": "hari.radhakrishnan@testleaf.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fields\": {\n    \"project\":\n                {\n                    \"key\": \"SEP\"\n                },\n    \"summary\": \"create issue in RA project\",\n    \"description\": \"Creating of an issue using project keys and issue type names using the REST API\",\n    \"issuetype\": {\n                    \"name\": \"Bug\"\n                }\n    }\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{HostJira}}/rest/api/2/search?jql=project=\"LEAF\"",
+					"protocol": "https",
+					"host": [
+						"{{HostJira}}"
+					],
+					"path": [
+						"rest",
+						"api",
+						"2",
+						"search"
+					],
+					"query": [
+						{
+							"key": "jql",
+							"value": "project=\"LEAF\""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListAllIssuesJira",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f1d59a04-7c9d-439e-8c90-d38089ba7e15",
+						"exec": [
+							"C_response = pm.response.json();",
+							"pm.globals.set(\"ID\",C_response.id);",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "7e07c803-1abc-4664-a627-ae4e2acb6286",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "jaXjYQDJccPw4jwIAlaJ530D",
+						"username": "hari.radhakrishnan@testleaf.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fields\": {\n    \"project\":\n                {\n                    \"key\": \"SEP\"\n                },\n    \"summary\": \"create issue in RA project\",\n    \"description\": \"Creating of an issue using project keys and issue type names using the REST API\",\n    \"issuetype\": {\n                    \"name\": \"Bug\"\n                }\n    }\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://{{HostJira}}/rest/api/2/issuetype"
+			},
+			"response": []
+		},
+		{
+			"name": "SpecificIssueJira",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f1d59a04-7c9d-439e-8c90-d38089ba7e15",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "fd3b6f7c-9b79-4e04-8567-99bfab9edcac",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "jaXjYQDJccPw4jwIAlaJ530D",
+						"username": "hari.radhakrishnan@testleaf.com"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fields\": {\n    \"project\":\n                {\n                    \"key\": \"SEP\"\n                },\n    \"summary\": \"create issue in RA project\",\n    \"description\": \"Creating of an issue using project keys and issue type names using the REST API\",\n    \"issuetype\": {\n                    \"name\": \"Bug\"\n                }\n    }\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://{{HostJira}}/rest/api/2/issuetype/10003"
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateJiraPUT",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f1d59a04-7c9d-439e-8c90-d38089ba7e15",
+						"exec": [
+							"pm.test(\"Status code is 204: Request updated successfully\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "569337be-c017-4d2f-8763-3e8ddd94b731",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "jaXjYQDJccPw4jwIAlaJ530D",
+						"username": "hari.radhakrishnan@testleaf.com"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fields\": {\n        \"description\": \"Bug creation Using REST API for testing\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://{{HostJira}}/rest/api/2/issue/{{Key}}"
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteJiraDELETE",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f1d59a04-7c9d-439e-8c90-d38089ba7e15",
+						"exec": [
+							"pm.test(\"Status code is 204: Request deleted successfully\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "3e66ce19-2848-44e3-b07d-001eb5562b1f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "jaXjYQDJccPw4jwIAlaJ530D",
+						"username": "hari.radhakrishnan@testleaf.com"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://{{HostJira}}/rest/api/2/issue/{{Key}}"
+			},
+			"response": []
+		}
+	]
+}
