@@ -1,0 +1,444 @@
+{
+	"info": {
+		"_postman_id": "0da83902-3537-4557-b34a-bb98abfae151",
+		"name": "Week2.Day2CalssAssignJira",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23257466"
+	},
+	"item": [
+		{
+			"name": "CreateJiraPOST",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"C_response=pm.response.json();",
+							"pm.globals.set(\"Key\",C_response.key);",
+							"pm.test(\"Status code is 201: Request create successfully\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "jaXjYQDJccPw4jwIAlaJ530D",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "hari.radhakrishnan@testleaf.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fields\": {\n        \"project\": {\n            \"key\": \"SEP\"\n        },\n        \"summary\": \"create issue in RA project\",\n        \"description\": \"Creating of an issue using project keys and issue type names using the REST API\",\n        \"issuetype\": {\n            \"name\": \"Bug\"\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{HostJira}}/rest/api/2/issue/",
+					"protocol": "https",
+					"host": [
+						"{{HostJira}}"
+					],
+					"path": [
+						"rest",
+						"api",
+						"2",
+						"issue",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RetriveJiraGET",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200: Request retrieved successfully\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "jaXjYQDJccPw4jwIAlaJ530D",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "hari.radhakrishnan@testleaf.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fields\": {\n    \"project\":\n                {\n                    \"key\": \"SEP\"\n                },\n    \"summary\": \"create issue in RA project\",\n    \"description\": \"Creating of an issue using project keys and issue type names using the REST API\",\n    \"issuetype\": {\n                    \"name\": \"Bug\"\n                }\n    }\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{HostJira}}/rest/api/2/issue/{{Key}}",
+					"protocol": "https",
+					"host": [
+						"{{HostJira}}"
+					],
+					"path": [
+						"rest",
+						"api",
+						"2",
+						"issue",
+						"{{Key}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SearchAllIssuesJira",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "jaXjYQDJccPw4jwIAlaJ530D",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "hari.radhakrishnan@testleaf.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fields\": {\n    \"project\":\n                {\n                    \"key\": \"SEP\"\n                },\n    \"summary\": \"create issue in RA project\",\n    \"description\": \"Creating of an issue using project keys and issue type names using the REST API\",\n    \"issuetype\": {\n                    \"name\": \"Bug\"\n                }\n    }\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{HostJira}}/rest/api/2/search?jql=project=\"LEAF\"",
+					"protocol": "https",
+					"host": [
+						"{{HostJira}}"
+					],
+					"path": [
+						"rest",
+						"api",
+						"2",
+						"search"
+					],
+					"query": [
+						{
+							"key": "jql",
+							"value": "project=\"LEAF\""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListAllIssuesJira",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"C_response = pm.response.json();",
+							"pm.globals.set(\"ID\",C_response.id);",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "jaXjYQDJccPw4jwIAlaJ530D",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "hari.radhakrishnan@testleaf.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fields\": {\n    \"project\":\n                {\n                    \"key\": \"SEP\"\n                },\n    \"summary\": \"create issue in RA project\",\n    \"description\": \"Creating of an issue using project keys and issue type names using the REST API\",\n    \"issuetype\": {\n                    \"name\": \"Bug\"\n                }\n    }\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{HostJira}}/rest/api/2/issuetype",
+					"protocol": "https",
+					"host": [
+						"{{HostJira}}"
+					],
+					"path": [
+						"rest",
+						"api",
+						"2",
+						"issuetype"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SpecificIssueJira",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "jaXjYQDJccPw4jwIAlaJ530D",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "hari.radhakrishnan@testleaf.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fields\": {\n    \"project\":\n                {\n                    \"key\": \"SEP\"\n                },\n    \"summary\": \"create issue in RA project\",\n    \"description\": \"Creating of an issue using project keys and issue type names using the REST API\",\n    \"issuetype\": {\n                    \"name\": \"Bug\"\n                }\n    }\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{HostJira}}/rest/api/2/issuetype/10003",
+					"protocol": "https",
+					"host": [
+						"{{HostJira}}"
+					],
+					"path": [
+						"rest",
+						"api",
+						"2",
+						"issuetype",
+						"10003"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateJiraPUT",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204: Request updated successfully\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "jaXjYQDJccPw4jwIAlaJ530D",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "hari.radhakrishnan@testleaf.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fields\": {\n        \"description\": \"Bug creation Using REST API for testing\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{HostJira}}/rest/api/2/issue/{{Key}}",
+					"protocol": "https",
+					"host": [
+						"{{HostJira}}"
+					],
+					"path": [
+						"rest",
+						"api",
+						"2",
+						"issue",
+						"{{Key}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteJiraDELETE",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204: Request deleted successfully\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "jaXjYQDJccPw4jwIAlaJ530D",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "hari.radhakrishnan@testleaf.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{HostJira}}/rest/api/2/issue/{{Key}}",
+					"protocol": "https",
+					"host": [
+						"{{HostJira}}"
+					],
+					"path": [
+						"rest",
+						"api",
+						"2",
+						"issue",
+						"{{Key}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

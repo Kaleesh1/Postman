@@ -1,0 +1,235 @@
+{
+	"id": "410b5803-85b9-4755-b166-8a8933523796",
+	"name": "Week2.Day2CalssAssignJira",
+	"timestamp": "2022-09-18T07:41:42.214Z",
+	"collection_id": "23257466-0da83902-3537-4557-b34a-bb98abfae151",
+	"folder_id": 0,
+	"environment_id": "23257466-5914a453-e349-4780-9e4b-c7a20a668c61",
+	"totalPass": 7,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "51564d41-9e25-4a14-8b43-26cad2d50d24",
+			"name": "CreateJiraPOST",
+			"url": "https://api-training.atlassian.net/rest/api/2/issue/",
+			"time": 754,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201: Request create successfully": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201: Request create successfully": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				754
+			],
+			"allTests": [
+				{
+					"Status code is 201: Request create successfully": true
+				}
+			]
+		},
+		{
+			"id": "484a77e5-c7b4-433f-9f3b-a44b662824b8",
+			"name": "RetriveJiraGET",
+			"url": "https://api-training.atlassian.net/rest/api/2/issue/SEP-60",
+			"time": 419,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200: Request retrieved successfully": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200: Request retrieved successfully": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				419
+			],
+			"allTests": [
+				{
+					"Status code is 200: Request retrieved successfully": true
+				}
+			]
+		},
+		{
+			"id": "93fd4d1b-eb8b-4344-902d-ee3dac2dabd5",
+			"name": "SearchAllIssuesJira",
+			"url": "https://api-training.atlassian.net/rest/api/2/search?jql=project=%22LEAF%22",
+			"time": 1463,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1463
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "7e07c803-1abc-4664-a627-ae4e2acb6286",
+			"name": "ListAllIssuesJira",
+			"url": "https://api-training.atlassian.net/rest/api/2/issuetype",
+			"time": 148,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				148
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "fd3b6f7c-9b79-4e04-8567-99bfab9edcac",
+			"name": "SpecificIssueJira",
+			"url": "https://api-training.atlassian.net/rest/api/2/issuetype/10003",
+			"time": 154,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				154
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "569337be-c017-4d2f-8763-3e8ddd94b731",
+			"name": "UpdateJiraPUT",
+			"url": "https://api-training.atlassian.net/rest/api/2/issue/SEP-60",
+			"time": 458,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Status code is 204: Request updated successfully": true
+			},
+			"testPassFailCounts": {
+				"Status code is 204: Request updated successfully": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				458
+			],
+			"allTests": [
+				{
+					"Status code is 204: Request updated successfully": true
+				}
+			]
+		},
+		{
+			"id": "3e66ce19-2848-44e3-b07d-001eb5562b1f",
+			"name": "DeleteJiraDELETE",
+			"url": "https://api-training.atlassian.net/rest/api/2/issue/SEP-60",
+			"time": 392,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Status code is 204: Request deleted successfully": true
+			},
+			"testPassFailCounts": {
+				"Status code is 204: Request deleted successfully": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				392
+			],
+			"allTests": [
+				{
+					"Status code is 204: Request deleted successfully": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 3788,
+	"collection": {
+		"requests": [
+			{
+				"id": "51564d41-9e25-4a14-8b43-26cad2d50d24",
+				"method": "POST"
+			},
+			{
+				"id": "484a77e5-c7b4-433f-9f3b-a44b662824b8",
+				"method": "GET"
+			},
+			{
+				"id": "93fd4d1b-eb8b-4344-902d-ee3dac2dabd5",
+				"method": "GET"
+			},
+			{
+				"id": "7e07c803-1abc-4664-a627-ae4e2acb6286",
+				"method": "GET"
+			},
+			{
+				"id": "fd3b6f7c-9b79-4e04-8567-99bfab9edcac",
+				"method": "GET"
+			},
+			{
+				"id": "569337be-c017-4d2f-8763-3e8ddd94b731",
+				"method": "PUT"
+			},
+			{
+				"id": "3e66ce19-2848-44e3-b07d-001eb5562b1f",
+				"method": "DELETE"
+			}
+		]
+	}
+}
